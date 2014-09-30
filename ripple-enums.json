@@ -1,0 +1,1430 @@
+{
+  "LedgerEntryType": {
+    "ltINVALID": -1,
+    "ltTICKET": 84,
+    "ltACCOUNT_ROOT": 97,
+    "ltNotUsed01": 99,
+    "ltDIR_NODE": 100,
+    "ltAMENDMENTS": 102,
+    "ltGENERATOR_MAP": 103,
+    "ltLEDGER_HASHES": 104,
+    "ltNICKNAME": 110,
+    "ltOFFER": 111,
+    "ltRIPPLE_STATE": 114,
+    "ltFEE_SETTINGS": 115
+  },
+  "TransactionType": {
+    "ttINVALID": -1,
+    "ttPAYMENT": 0,
+    "ttCLAIM": 1,
+    "ttWALLET_ADD": 2,
+    "ttACCOUNT_SET": 3,
+    "ttPASSWORD_FUND": 4,
+    "ttREGULAR_KEY_SET": 5,
+    "ttNICKNAME_SET": 6,
+    "ttOFFER_CREATE": 7,
+    "ttOFFER_CANCEL": 8,
+    "no_longer_used": 9,
+    "ttTICKET_CREATE": 10,
+    "ttTICKET_CANCEL": 11,
+    "ttTRUST_SET": 20,
+    "ttAMENDMENT": 100,
+    "ttFEE": 101
+  },
+  "SerializedTypeID": {
+    "STI_UNKNOWN": -2,
+    "STI_DONE": -1,
+    "STI_NOTPRESENT": 0,
+    "STI_UINT16": 1,
+    "STI_UINT32": 2,
+    "STI_UINT64": 3,
+    "STI_HASH128": 4,
+    "STI_HASH256": 5,
+    "STI_AMOUNT": 6,
+    "STI_VL": 7,
+    "STI_ACCOUNT": 8,
+    "STI_OBJECT": 14,
+    "STI_ARRAY": 15,
+    "STI_UINT8": 16,
+    "STI_HASH160": 17,
+    "STI_PATHSET": 18,
+    "STI_VECTOR256": 19,
+    "STI_TRANSACTION": 10001,
+    "STI_LEDGERENTRY": 10002,
+    "STI_VALIDATION": 10003,
+    "STI_METADATA": 10004
+  },
+  "SOE_Flags": {
+    "SOE_INVALID": -1,
+    "SOE_REQUIRED": 0,
+    "SOE_OPTIONAL": 1,
+    "SOE_DEFAULT": 2
+  },
+  "transactions": {
+    "AccountSet": {
+      "TransactionType": "ttACCOUNT_SET",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "EmailHash": "SOE_OPTIONAL",
+        "WalletLocator": "SOE_OPTIONAL",
+        "WalletSize": "SOE_OPTIONAL",
+        "MessageKey": "SOE_OPTIONAL",
+        "Domain": "SOE_OPTIONAL",
+        "TransferRate": "SOE_OPTIONAL",
+        "SetFlag": "SOE_OPTIONAL",
+        "ClearFlag": "SOE_OPTIONAL"
+      }
+    },
+    "EnableAmendment": {
+      "TransactionType": "ttAMENDMENT",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "Amendment": "SOE_REQUIRED"
+      }
+    },
+    "OfferCancel": {
+      "TransactionType": "ttOFFER_CANCEL",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "OfferSequence": "SOE_REQUIRED"
+      }
+    },
+    "OfferCreate": {
+      "TransactionType": "ttOFFER_CREATE",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "TakerPays": "SOE_REQUIRED",
+        "TakerGets": "SOE_REQUIRED",
+        "Expiration": "SOE_OPTIONAL",
+        "OfferSequence": "SOE_OPTIONAL"
+      }
+    },
+    "Payment": {
+      "TransactionType": "ttPAYMENT",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "Destination": "SOE_REQUIRED",
+        "Amount": "SOE_REQUIRED",
+        "SendMax": "SOE_OPTIONAL",
+        "Paths": "SOE_DEFAULT",
+        "InvoiceID": "SOE_OPTIONAL",
+        "DestinationTag": "SOE_OPTIONAL"
+      }
+    },
+    "SetFee": {
+      "TransactionType": "ttFEE",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "BaseFee": "SOE_REQUIRED",
+        "ReferenceFeeUnits": "SOE_REQUIRED",
+        "ReserveBase": "SOE_REQUIRED",
+        "ReserveIncrement": "SOE_REQUIRED"
+      }
+    },
+    "SetRegularKey": {
+      "TransactionType": "ttREGULAR_KEY_SET",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "RegularKey": "SOE_OPTIONAL"
+      }
+    },
+    "TicketCancel": {
+      "TransactionType": "ttTICKET_CANCEL",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "TicketID": "SOE_REQUIRED"
+      }
+    },
+    "TicketCreate": {
+      "TransactionType": "ttTICKET_CREATE",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "Target": "SOE_OPTIONAL",
+        "Expiration": "SOE_OPTIONAL"
+      }
+    },
+    "TrustSet": {
+      "TransactionType": "ttTRUST_SET",
+      "fields": {
+        "TransactionType": "SOE_REQUIRED",
+        "Flags": "SOE_OPTIONAL",
+        "SourceTag": "SOE_OPTIONAL",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "Fee": "SOE_REQUIRED",
+        "OperationLimit": "SOE_OPTIONAL",
+        "Memos": "SOE_OPTIONAL",
+        "SigningPubKey": "SOE_REQUIRED",
+        "TxnSignature": "SOE_OPTIONAL",
+        "LimitAmount": "SOE_OPTIONAL",
+        "QualityIn": "SOE_OPTIONAL",
+        "QualityOut": "SOE_OPTIONAL"
+      }
+    }
+  },
+  "ledger_entries": {
+    "AccountRoot": {
+      "LedgerEntryType": "ltACCOUNT_ROOT",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "Balance": "SOE_REQUIRED",
+        "OwnerCount": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_REQUIRED",
+        "PreviousTxnLgrSeq": "SOE_REQUIRED",
+        "AccountTxnID": "SOE_OPTIONAL",
+        "RegularKey": "SOE_OPTIONAL",
+        "EmailHash": "SOE_OPTIONAL",
+        "WalletLocator": "SOE_OPTIONAL",
+        "WalletSize": "SOE_OPTIONAL",
+        "MessageKey": "SOE_OPTIONAL",
+        "TransferRate": "SOE_OPTIONAL",
+        "Domain": "SOE_OPTIONAL"
+      }
+    },
+    "DirectoryNode": {
+      "LedgerEntryType": "ltDIR_NODE",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Owner": "SOE_OPTIONAL",
+        "TakerPaysCurrency": "SOE_OPTIONAL",
+        "TakerPaysIssuer": "SOE_OPTIONAL",
+        "TakerGetsCurrency": "SOE_OPTIONAL",
+        "TakerGetsIssuer": "SOE_OPTIONAL",
+        "ExchangeRate": "SOE_OPTIONAL",
+        "Indexes": "SOE_REQUIRED",
+        "RootIndex": "SOE_REQUIRED",
+        "IndexNext": "SOE_OPTIONAL",
+        "IndexPrevious": "SOE_OPTIONAL"
+      }
+    },
+    "EnabledAmendments": {
+      "LedgerEntryType": "ltAMENDMENTS",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Amendments": "SOE_REQUIRED"
+      }
+    },
+    "FeeSettings": {
+      "LedgerEntryType": "ltFEE_SETTINGS",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "BaseFee": "SOE_REQUIRED",
+        "ReferenceFeeUnits": "SOE_REQUIRED",
+        "ReserveBase": "SOE_REQUIRED",
+        "ReserveIncrement": "SOE_REQUIRED"
+      }
+    },
+    "GeneratorMap": {
+      "LedgerEntryType": "ltGENERATOR_MAP",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Generator": "SOE_REQUIRED"
+      }
+    },
+    "LedgerHashes": {
+      "LedgerEntryType": "ltLEDGER_HASHES",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "FirstLedgerSequence": "SOE_OPTIONAL",
+        "LastLedgerSequence": "SOE_OPTIONAL",
+        "Hashes": "SOE_REQUIRED"
+      }
+    },
+    "Offer": {
+      "LedgerEntryType": "ltOFFER",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "TakerPays": "SOE_REQUIRED",
+        "TakerGets": "SOE_REQUIRED",
+        "BookDirectory": "SOE_REQUIRED",
+        "BookNode": "SOE_REQUIRED",
+        "OwnerNode": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_REQUIRED",
+        "PreviousTxnLgrSeq": "SOE_REQUIRED",
+        "Expiration": "SOE_OPTIONAL"
+      }
+    },
+    "RippleState": {
+      "LedgerEntryType": "ltRIPPLE_STATE",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Balance": "SOE_REQUIRED",
+        "LowLimit": "SOE_REQUIRED",
+        "HighLimit": "SOE_REQUIRED",
+        "PreviousTxnID": "SOE_REQUIRED",
+        "PreviousTxnLgrSeq": "SOE_REQUIRED",
+        "LowNode": "SOE_OPTIONAL",
+        "LowQualityIn": "SOE_OPTIONAL",
+        "LowQualityOut": "SOE_OPTIONAL",
+        "HighNode": "SOE_OPTIONAL",
+        "HighQualityIn": "SOE_OPTIONAL",
+        "HighQualityOut": "SOE_OPTIONAL"
+      }
+    },
+    "Ticket": {
+      "LedgerEntryType": "ltTICKET",
+      "fields": {
+        "LedgerIndex": "SOE_OPTIONAL",
+        "LedgerEntryType": "SOE_REQUIRED",
+        "Flags": "SOE_REQUIRED",
+        "Account": "SOE_REQUIRED",
+        "Sequence": "SOE_REQUIRED",
+        "OwnerNode": "SOE_REQUIRED",
+        "Target": "SOE_OPTIONAL",
+        "Expiration": "SOE_OPTIONAL"
+      }
+    }
+  },
+  "commands": {
+    "account_currencies": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "account_info": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "account_lines": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "account_offers": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "account_tx": {
+      "role": "USER",
+      "condition": "NEEDS_NETWORK_CONNECTION"
+    },
+    "blacklist": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "book_offers": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "connect": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "consensus_info": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "feature": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "fetch_info": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "get_counts": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "internal": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "ledger": {
+      "role": "USER",
+      "condition": "NEEDS_NETWORK_CONNECTION"
+    },
+    "ledger_accept": {
+      "role": "ADMIN",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "ledger_cleaner": {
+      "role": "ADMIN",
+      "condition": "NEEDS_NETWORK_CONNECTION"
+    },
+    "ledger_closed": {
+      "role": "USER",
+      "condition": "NEEDS_CLOSED_LEDGER"
+    },
+    "ledger_current": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "ledger_data": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "ledger_entry": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "ledger_header": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "ledger_request": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "log_level": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "logrotate": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "owner_info": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "path_find": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "peers": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "ping": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "print": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "proof_create": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "proof_solve": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "proof_verify": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "random": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "ripple_path_find": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "server_info": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "server_state": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "sign": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "sms": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "stop": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "submit": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "subscribe": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "transaction_entry": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "tx": {
+      "role": "USER",
+      "condition": "NEEDS_NETWORK_CONNECTION"
+    },
+    "tx_history": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "unl_add": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unl_delete": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unl_list": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unl_load": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unl_network": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unl_reset": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unl_score": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "unsubscribe": {
+      "role": "USER",
+      "condition": "NO_CONDITION"
+    },
+    "validation_create": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "validation_seed": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "wallet_accounts": {
+      "role": "USER",
+      "condition": "NEEDS_CURRENT_LEDGER"
+    },
+    "wallet_propose": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    },
+    "wallet_seed": {
+      "role": "ADMIN",
+      "condition": "NO_CONDITION"
+    }
+  },
+  "TransactionEngineResult": {
+    "telLOCAL_ERROR": [
+      -399,
+      "Local failure."
+    ],
+    "telBAD_DOMAIN": [
+      -398,
+      "Domain too long."
+    ],
+    "telBAD_PATH_COUNT": [
+      -397,
+      "Malformed: Too many paths."
+    ],
+    "telBAD_PUBLIC_KEY": [
+      -396,
+      "Public key too long."
+    ],
+    "telFAILED_PROCESSING": [
+      -395,
+      "Failed to correctly process transaction."
+    ],
+    "telINSUF_FEE_P": [
+      -394,
+      "Fee insufficient."
+    ],
+    "telNO_DST_PARTIAL": [
+      -393,
+      "Partial payment to create account not allowed."
+    ],
+    "temMALFORMED": [
+      -299,
+      "Malformed transaction."
+    ],
+    "temBAD_AMOUNT": [
+      -298,
+      "Can only send positive amounts."
+    ],
+    "temBAD_AUTH_MASTER": [
+      -297,
+      "Auth for unclaimed account needs correct master key."
+    ],
+    "temBAD_CURRENCY": [
+      -296,
+      "Malformed: Bad currency."
+    ],
+    "temBAD_EXPIRATION": [
+      -295,
+      "Malformed: Bad expiration."
+    ],
+    "temBAD_FEE": [
+      -294,
+      "Invalid fee, negative or not XRP."
+    ],
+    "temBAD_ISSUER": [
+      -293,
+      "Malformed: Bad issuer."
+    ],
+    "temBAD_LIMIT": [
+      -292,
+      "Limits must be non-negative."
+    ],
+    "temBAD_OFFER": [
+      -291,
+      "Malformed: Bad offer."
+    ],
+    "temBAD_PATH": [
+      -290,
+      "Malformed: Bad path."
+    ],
+    "temBAD_PATH_LOOP": [
+      -289,
+      "Malformed: Loop in path."
+    ],
+    "temBAD_SEND_XRP_LIMIT": [
+      -288,
+      "Malformed: Limit quality is not allowed for XRP to XRP."
+    ],
+    "temBAD_SEND_XRP_MAX": [
+      -287,
+      "Malformed: Send max is not allowed for XRP to XRP."
+    ],
+    "temBAD_SEND_XRP_NO_DIRECT": [
+      -286,
+      "Malformed: No Ripple direct is not allowed for XRP to XRP."
+    ],
+    "temBAD_SEND_XRP_PARTIAL": [
+      -285,
+      "Malformed: Partial payment is not allowed for XRP to XRP."
+    ],
+    "temBAD_SEND_XRP_PATHS": [
+      -284,
+      "Malformed: Paths are not allowed for XRP to XRP."
+    ],
+    "temBAD_SEQUENCE": [
+      -283,
+      "Malformed: Sequence is not in the past."
+    ],
+    "temBAD_SIGNATURE": [
+      -282,
+      "Malformed: Bad signature."
+    ],
+    "temBAD_SRC_ACCOUNT": [
+      -281,
+      "Malformed: Bad source account."
+    ],
+    "temBAD_TRANSFER_RATE": [
+      -280,
+      "Malformed: Transfer rate must be >= 1.0"
+    ],
+    "temDST_IS_SRC": [
+      -279,
+      "Destination may not be source."
+    ],
+    "temDST_NEEDED": [
+      -278,
+      "Destination not specified."
+    ],
+    "temINVALID": [
+      -277,
+      "The transaction is ill-formed."
+    ],
+    "temINVALID_FLAG": [
+      -276,
+      "The transaction has an invalid flag."
+    ],
+    "temREDUNDANT": [
+      -275,
+      "Sends same currency to self."
+    ],
+    "temREDUNDANT_SEND_MAX": [
+      -274,
+      "Send max is redundant."
+    ],
+    "temRIPPLE_EMPTY": [
+      -273,
+      "PathSet with no paths."
+    ],
+    "temUNCERTAIN": [
+      -272,
+      "In process of determining result. Never returned."
+    ],
+    "temUNKNOWN": [
+      -271,
+      "The transactions requires logic not implemented yet."
+    ],
+    "tefFAILURE": [
+      -199,
+      "Failed to apply."
+    ],
+    "tefALREADY": [
+      -198,
+      "The exact transaction was already in this ledger."
+    ],
+    "tefBAD_ADD_AUTH": [
+      -197,
+      "Not authorized to add account."
+    ],
+    "tefBAD_AUTH": [
+      -196,
+      "Transaction's public key is not authorized."
+    ],
+    "tefBAD_LEDGER": [
+      -195,
+      "Ledger in unexpected state."
+    ],
+    "tefCREATED": [
+      -194,
+      "Can't add an already created account."
+    ],
+    "tefDST_TAG_NEEDED": [
+      -193,
+      "Destination tag required."
+    ],
+    "tefEXCEPTION": [
+      -192,
+      "Unexpected program state."
+    ],
+    "tefINTERNAL": [
+      -191,
+      "Internal error."
+    ],
+    "tefNO_AUTH_REQUIRED": [
+      -190,
+      "Auth is not required."
+    ],
+    "tefPAST_SEQ": [
+      -189,
+      "This sequence number has already past."
+    ],
+    "tefWRONG_PRIOR": [
+      -188,
+      "This previous transaction does not match."
+    ],
+    "tefMASTER_DISABLED": [
+      -187,
+      "Master key is disabled."
+    ],
+    "tefMAX_LEDGER": [
+      -186,
+      "Ledger sequence too high."
+    ],
+    "terRETRY": [
+      -99,
+      "Retry transaction."
+    ],
+    "terFUNDS_SPENT": [
+      -98,
+      "Can't set password, password set funds already spent."
+    ],
+    "terINSUF_FEE_B": [
+      -97,
+      "Account balance can't pay fee."
+    ],
+    "terNO_ACCOUNT": [
+      -96,
+      "The source account does not exist."
+    ],
+    "terNO_AUTH": [
+      -95,
+      "Not authorized to hold IOUs."
+    ],
+    "terNO_LINE": [
+      -94,
+      "No such line."
+    ],
+    "terOWNERS": [
+      -93,
+      "Non-zero owner count."
+    ],
+    "terPRE_SEQ": [
+      -92,
+      "Missing/inapplicable prior transaction."
+    ],
+    "terLAST": [
+      -91,
+      "Process last."
+    ],
+    "terNO_RIPPLE": [
+      -90,
+      "Path does not permit rippling."
+    ],
+    "tesSUCCESS": [
+      0,
+      "The transaction was applied."
+    ],
+    "tecCLAIM": [
+      100,
+      "Fee claimed. Sequence used. No action."
+    ],
+    "tecPATH_PARTIAL": [
+      101,
+      "Path could not send full amount."
+    ],
+    "tecUNFUNDED_ADD": [
+      102,
+      "Insufficient XRP balance for WalletAdd."
+    ],
+    "tecUNFUNDED_OFFER": [
+      103,
+      "Insufficient balance to fund created offer."
+    ],
+    "tecUNFUNDED_PAYMENT": [
+      104,
+      "Insufficient XRP balance to send."
+    ],
+    "tecFAILED_PROCESSING": [
+      105,
+      "Failed to correctly process transaction."
+    ],
+    "tecDIR_FULL": [
+      121,
+      "Can not add entry to full directory."
+    ],
+    "tecINSUF_RESERVE_LINE": [
+      122,
+      "Insufficient reserve to add trust line."
+    ],
+    "tecINSUF_RESERVE_OFFER": [
+      123,
+      "Insufficient reserve to create offer."
+    ],
+    "tecNO_DST": [
+      124,
+      "Destination does not exist. Send XRP to create it."
+    ],
+    "tecNO_DST_INSUF_XRP": [
+      125,
+      "Destination does not exist. Too little XRP sent to create it."
+    ],
+    "tecNO_LINE_INSUF_RESERVE": [
+      126,
+      "No such line. Too little reserve to create it."
+    ],
+    "tecNO_LINE_REDUNDANT": [
+      127,
+      "Can't set non-existent line to default."
+    ],
+    "tecPATH_DRY": [
+      128,
+      "Path could not send partial amount."
+    ],
+    "tecUNFUNDED": [
+      129,
+      "One of _ADD, _OFFER, or _SEND. Deprecated."
+    ],
+    "tecMASTER_DISABLED": [
+      130,
+      "Master key is disabled."
+    ],
+    "tecNO_REGULAR_KEY": [
+      131,
+      "Regular key is not set."
+    ],
+    "tecOWNERS": [
+      132,
+      "Non-zero owner count."
+    ],
+    "tecNO_ISSUER": [
+      133,
+      "Issuer account does not exist."
+    ],
+    "tecNO_AUTH": [
+      134,
+      "Not authorized to hold asset."
+    ],
+    "tecNO_LINE": [
+      135,
+      "No such line."
+    ],
+    "tecINSUFF_FEE": [
+      136,
+      "Insufficient balance to pay fee."
+    ],
+    "tecFROZEN": [
+      137,
+      "Asset is frozen."
+    ],
+    "tecNO_TARGET": [
+      138,
+      "Target account does not exist."
+    ],
+    "tecNO_PERMISSION": [
+      139,
+      "No permission to perform requested operation."
+    ],
+    "tecNO_ENTRY": [
+      140,
+      "No matching entry found."
+    ],
+    "tecINSUFFICIENT_RESERVE": [
+      141,
+      "Insufficient reserve to complete requested operation."
+    ]
+  },
+  "SField_Meta_enum": {
+    "sMD_Never": 0,
+    "sMD_ChangeOrig": 1,
+    "sMD_ChangeNew": 2,
+    "sMD_DeleteFinal": 4,
+    "sMD_Create": 8,
+    "sMD_Default": 15,
+    "sMD_Always": 16
+  },
+  "field_defaults": {
+    "meta": [
+      "sMD_Default"
+    ],
+    "is_signing_field": true
+  },
+  "fields": {
+    "Invalid": {
+      "type": -2,
+      "meta": [
+        "sMD_Never"
+      ],
+      "nth_of_type": 0
+    },
+    "Generic": {
+      "type": -2,
+      "meta": [
+        "sMD_Never"
+      ],
+      "nth_of_type": 0
+    },
+    "LedgerEntryType": {
+      "type": 1,
+      "meta": [
+        "sMD_Never"
+      ],
+      "nth_of_type": 1
+    },
+    "TransactionType": {
+      "type": 1,
+      "nth_of_type": 2
+    },
+    "Flags": {
+      "type": 2,
+      "nth_of_type": 2
+    },
+    "SourceTag": {
+      "type": 2,
+      "nth_of_type": 3
+    },
+    "Sequence": {
+      "type": 2,
+      "nth_of_type": 4
+    },
+    "PreviousTxnLgrSeq": {
+      "type": 2,
+      "meta": [
+        "sMD_DeleteFinal"
+      ],
+      "nth_of_type": 5
+    },
+    "LedgerSequence": {
+      "type": 2,
+      "nth_of_type": 6
+    },
+    "CloseTime": {
+      "type": 2,
+      "nth_of_type": 7
+    },
+    "ParentCloseTime": {
+      "type": 2,
+      "nth_of_type": 8
+    },
+    "SigningTime": {
+      "type": 2,
+      "nth_of_type": 9
+    },
+    "Expiration": {
+      "type": 2,
+      "nth_of_type": 10
+    },
+    "TransferRate": {
+      "type": 2,
+      "nth_of_type": 11
+    },
+    "WalletSize": {
+      "type": 2,
+      "nth_of_type": 12
+    },
+    "OwnerCount": {
+      "type": 2,
+      "nth_of_type": 13
+    },
+    "DestinationTag": {
+      "type": 2,
+      "nth_of_type": 14
+    },
+    "HighQualityIn": {
+      "type": 2,
+      "nth_of_type": 16
+    },
+    "HighQualityOut": {
+      "type": 2,
+      "nth_of_type": 17
+    },
+    "LowQualityIn": {
+      "type": 2,
+      "nth_of_type": 18
+    },
+    "LowQualityOut": {
+      "type": 2,
+      "nth_of_type": 19
+    },
+    "QualityIn": {
+      "type": 2,
+      "nth_of_type": 20
+    },
+    "QualityOut": {
+      "type": 2,
+      "nth_of_type": 21
+    },
+    "StampEscrow": {
+      "type": 2,
+      "nth_of_type": 22
+    },
+    "BondAmount": {
+      "type": 2,
+      "nth_of_type": 23
+    },
+    "LoadFee": {
+      "type": 2,
+      "nth_of_type": 24
+    },
+    "OfferSequence": {
+      "type": 2,
+      "nth_of_type": 25
+    },
+    "FirstLedgerSequence": {
+      "type": 2,
+      "nth_of_type": 26
+    },
+    "LastLedgerSequence": {
+      "type": 2,
+      "nth_of_type": 27
+    },
+    "TransactionIndex": {
+      "type": 2,
+      "nth_of_type": 28
+    },
+    "OperationLimit": {
+      "type": 2,
+      "nth_of_type": 29
+    },
+    "ReferenceFeeUnits": {
+      "type": 2,
+      "nth_of_type": 30
+    },
+    "ReserveBase": {
+      "type": 2,
+      "nth_of_type": 31
+    },
+    "ReserveIncrement": {
+      "type": 2,
+      "nth_of_type": 32
+    },
+    "SetFlag": {
+      "type": 2,
+      "nth_of_type": 33
+    },
+    "ClearFlag": {
+      "type": 2,
+      "nth_of_type": 34
+    },
+    "IndexNext": {
+      "type": 3,
+      "nth_of_type": 1
+    },
+    "IndexPrevious": {
+      "type": 3,
+      "nth_of_type": 2
+    },
+    "BookNode": {
+      "type": 3,
+      "nth_of_type": 3
+    },
+    "OwnerNode": {
+      "type": 3,
+      "nth_of_type": 4
+    },
+    "BaseFee": {
+      "type": 3,
+      "nth_of_type": 5
+    },
+    "ExchangeRate": {
+      "type": 3,
+      "nth_of_type": 6
+    },
+    "LowNode": {
+      "type": 3,
+      "nth_of_type": 7
+    },
+    "HighNode": {
+      "type": 3,
+      "nth_of_type": 8
+    },
+    "EmailHash": {
+      "type": 4,
+      "nth_of_type": 1
+    },
+    "LedgerHash": {
+      "type": 5,
+      "nth_of_type": 1
+    },
+    "ParentHash": {
+      "type": 5,
+      "nth_of_type": 2
+    },
+    "TransactionHash": {
+      "type": 5,
+      "nth_of_type": 3
+    },
+    "AccountHash": {
+      "type": 5,
+      "nth_of_type": 4
+    },
+    "PreviousTxnID": {
+      "type": 5,
+      "meta": [
+        "sMD_DeleteFinal"
+      ],
+      "nth_of_type": 5
+    },
+    "LedgerIndex": {
+      "type": 5,
+      "nth_of_type": 6
+    },
+    "WalletLocator": {
+      "type": 5,
+      "nth_of_type": 7
+    },
+    "RootIndex": {
+      "type": 5,
+      "meta": [
+        "sMD_Always"
+      ],
+      "nth_of_type": 8
+    },
+    "AccountTxnID": {
+      "type": 5,
+      "nth_of_type": 9
+    },
+    "BookDirectory": {
+      "type": 5,
+      "nth_of_type": 16
+    },
+    "InvoiceID": {
+      "type": 5,
+      "nth_of_type": 17
+    },
+    "Nickname": {
+      "type": 5,
+      "nth_of_type": 18
+    },
+    "Amendment": {
+      "type": 5,
+      "nth_of_type": 19
+    },
+    "TicketID": {
+      "type": 5,
+      "nth_of_type": 20
+    },
+    "Hash": {
+      "type": 5,
+      "nth_of_type": 257
+    },
+    "Index": {
+      "type": 5,
+      "nth_of_type": 258
+    },
+    "Amount": {
+      "type": 6,
+      "nth_of_type": 1
+    },
+    "Balance": {
+      "type": 6,
+      "nth_of_type": 2
+    },
+    "LimitAmount": {
+      "type": 6,
+      "nth_of_type": 3
+    },
+    "TakerPays": {
+      "type": 6,
+      "nth_of_type": 4
+    },
+    "TakerGets": {
+      "type": 6,
+      "nth_of_type": 5
+    },
+    "LowLimit": {
+      "type": 6,
+      "nth_of_type": 6
+    },
+    "HighLimit": {
+      "type": 6,
+      "nth_of_type": 7
+    },
+    "Fee": {
+      "type": 6,
+      "nth_of_type": 8
+    },
+    "SendMax": {
+      "type": 6,
+      "nth_of_type": 9
+    },
+    "MinimumOffer": {
+      "type": 6,
+      "nth_of_type": 16
+    },
+    "RippleEscrow": {
+      "type": 6,
+      "nth_of_type": 17
+    },
+    "DeliveredAmount": {
+      "type": 6,
+      "nth_of_type": 18
+    },
+    "PublicKey": {
+      "type": 7,
+      "nth_of_type": 1
+    },
+    "MessageKey": {
+      "type": 7,
+      "nth_of_type": 2
+    },
+    "SigningPubKey": {
+      "type": 7,
+      "nth_of_type": 3
+    },
+    "TxnSignature": {
+      "type": 7,
+      "is_signing_field": false,
+      "nth_of_type": 4
+    },
+    "Generator": {
+      "type": 7,
+      "nth_of_type": 5
+    },
+    "Signature": {
+      "type": 7,
+      "is_signing_field": false,
+      "nth_of_type": 6
+    },
+    "Domain": {
+      "type": 7,
+      "nth_of_type": 7
+    },
+    "FundCode": {
+      "type": 7,
+      "nth_of_type": 8
+    },
+    "RemoveCode": {
+      "type": 7,
+      "nth_of_type": 9
+    },
+    "ExpireCode": {
+      "type": 7,
+      "nth_of_type": 10
+    },
+    "CreateCode": {
+      "type": 7,
+      "nth_of_type": 11
+    },
+    "MemoType": {
+      "type": 7,
+      "nth_of_type": 12
+    },
+    "MemoData": {
+      "type": 7,
+      "nth_of_type": 13
+    },
+    "MemoFormat": {
+      "type": 7,
+      "nth_of_type": 14
+    },
+    "Account": {
+      "type": 8,
+      "nth_of_type": 1
+    },
+    "Owner": {
+      "type": 8,
+      "nth_of_type": 2
+    },
+    "Destination": {
+      "type": 8,
+      "nth_of_type": 3
+    },
+    "Issuer": {
+      "type": 8,
+      "nth_of_type": 4
+    },
+    "Target": {
+      "type": 8,
+      "nth_of_type": 7
+    },
+    "RegularKey": {
+      "type": 8,
+      "nth_of_type": 8
+    },
+    "TransactionMetaData": {
+      "type": 14,
+      "nth_of_type": 2
+    },
+    "CreatedNode": {
+      "type": 14,
+      "nth_of_type": 3
+    },
+    "DeletedNode": {
+      "type": 14,
+      "nth_of_type": 4
+    },
+    "ModifiedNode": {
+      "type": 14,
+      "nth_of_type": 5
+    },
+    "PreviousFields": {
+      "type": 14,
+      "nth_of_type": 6
+    },
+    "FinalFields": {
+      "type": 14,
+      "nth_of_type": 7
+    },
+    "NewFields": {
+      "type": 14,
+      "nth_of_type": 8
+    }
+  }
+}
