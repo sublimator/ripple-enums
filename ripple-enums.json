@@ -408,232 +408,232 @@
   },
   "commands": {
     "account_currencies": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "account_info": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "account_lines": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "account_offers": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "account_tx": {
-      "role": "USER",
-      "condition": "NEEDS_NETWORK_CONNECTION"
+      "condition": "NEEDS_NETWORK_CONNECTION",
+      "role": "USER"
     },
     "blacklist": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "book_offers": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "connect": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "consensus_info": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "feature": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "fetch_info": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "get_counts": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "internal": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "ledger": {
-      "role": "USER",
-      "condition": "NEEDS_NETWORK_CONNECTION"
+      "condition": "NEEDS_NETWORK_CONNECTION",
+      "role": "USER"
     },
     "ledger_accept": {
-      "role": "ADMIN",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "ADMIN"
     },
     "ledger_cleaner": {
-      "role": "ADMIN",
-      "condition": "NEEDS_NETWORK_CONNECTION"
+      "condition": "NEEDS_NETWORK_CONNECTION",
+      "role": "ADMIN"
     },
     "ledger_closed": {
-      "role": "USER",
-      "condition": "NEEDS_CLOSED_LEDGER"
+      "condition": "NEEDS_CLOSED_LEDGER",
+      "role": "USER"
     },
     "ledger_current": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "ledger_data": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "ledger_entry": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "ledger_header": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "ledger_request": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "log_level": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "logrotate": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "owner_info": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "path_find": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "peers": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "ping": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "print": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "proof_create": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "proof_solve": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "proof_verify": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "random": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "ripple_path_find": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "server_info": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "server_state": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "sign": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "sms": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "stop": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "submit": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "subscribe": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "transaction_entry": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "tx": {
-      "role": "USER",
-      "condition": "NEEDS_NETWORK_CONNECTION"
+      "condition": "NEEDS_NETWORK_CONNECTION",
+      "role": "USER"
     },
     "tx_history": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "unl_add": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unl_delete": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unl_list": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unl_load": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unl_network": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unl_reset": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unl_score": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "unsubscribe": {
-      "role": "USER",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "USER"
     },
     "validation_create": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "validation_seed": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "wallet_accounts": {
-      "role": "USER",
-      "condition": "NEEDS_CURRENT_LEDGER"
+      "condition": "NEEDS_CURRENT_LEDGER",
+      "role": "USER"
     },
     "wallet_propose": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     },
     "wallet_seed": {
-      "role": "ADMIN",
-      "condition": "NO_CONDITION"
+      "condition": "NO_CONDITION",
+      "role": "ADMIN"
     }
   },
   "TransactionEngineResult": {
@@ -1006,425 +1006,522 @@
     "is_signing_field": true
   },
   "fields": {
-    "Invalid": {
+    "": {
+      "nth_of_type": 0,
       "type": -2,
       "meta": [
         "sMD_Never"
-      ],
-      "nth_of_type": 0
-    },
-    "Generic": {
-      "type": -2,
-      "meta": [
-        "sMD_Never"
-      ],
-      "nth_of_type": 0
+      ]
     },
     "LedgerEntryType": {
+      "nth_of_type": 1,
       "type": 1,
       "meta": [
         "sMD_Never"
-      ],
-      "nth_of_type": 1
+      ]
     },
     "TransactionType": {
-      "type": 1,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 1
     },
     "Flags": {
-      "type": 2,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 2
     },
     "SourceTag": {
-      "type": 2,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 2
     },
     "Sequence": {
-      "type": 2,
-      "nth_of_type": 4
+      "nth_of_type": 4,
+      "type": 2
     },
     "PreviousTxnLgrSeq": {
+      "nth_of_type": 5,
       "type": 2,
       "meta": [
         "sMD_DeleteFinal"
-      ],
-      "nth_of_type": 5
+      ]
     },
     "LedgerSequence": {
-      "type": 2,
-      "nth_of_type": 6
+      "nth_of_type": 6,
+      "type": 2
     },
     "CloseTime": {
-      "type": 2,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 2
     },
     "ParentCloseTime": {
-      "type": 2,
-      "nth_of_type": 8
+      "nth_of_type": 8,
+      "type": 2
     },
     "SigningTime": {
-      "type": 2,
-      "nth_of_type": 9
+      "nth_of_type": 9,
+      "type": 2
     },
     "Expiration": {
-      "type": 2,
-      "nth_of_type": 10
+      "nth_of_type": 10,
+      "type": 2
     },
     "TransferRate": {
-      "type": 2,
-      "nth_of_type": 11
+      "nth_of_type": 11,
+      "type": 2
     },
     "WalletSize": {
-      "type": 2,
-      "nth_of_type": 12
+      "nth_of_type": 12,
+      "type": 2
     },
     "OwnerCount": {
-      "type": 2,
-      "nth_of_type": 13
+      "nth_of_type": 13,
+      "type": 2
     },
     "DestinationTag": {
-      "type": 2,
-      "nth_of_type": 14
+      "nth_of_type": 14,
+      "type": 2
     },
     "HighQualityIn": {
-      "type": 2,
-      "nth_of_type": 16
+      "nth_of_type": 16,
+      "type": 2
     },
     "HighQualityOut": {
-      "type": 2,
-      "nth_of_type": 17
+      "nth_of_type": 17,
+      "type": 2
     },
     "LowQualityIn": {
-      "type": 2,
-      "nth_of_type": 18
+      "nth_of_type": 18,
+      "type": 2
     },
     "LowQualityOut": {
-      "type": 2,
-      "nth_of_type": 19
+      "nth_of_type": 19,
+      "type": 2
     },
     "QualityIn": {
-      "type": 2,
-      "nth_of_type": 20
+      "nth_of_type": 20,
+      "type": 2
     },
     "QualityOut": {
-      "type": 2,
-      "nth_of_type": 21
+      "nth_of_type": 21,
+      "type": 2
     },
     "StampEscrow": {
-      "type": 2,
-      "nth_of_type": 22
+      "nth_of_type": 22,
+      "type": 2
     },
     "BondAmount": {
-      "type": 2,
-      "nth_of_type": 23
+      "nth_of_type": 23,
+      "type": 2
     },
     "LoadFee": {
-      "type": 2,
-      "nth_of_type": 24
+      "nth_of_type": 24,
+      "type": 2
     },
     "OfferSequence": {
-      "type": 2,
-      "nth_of_type": 25
+      "nth_of_type": 25,
+      "type": 2
     },
     "FirstLedgerSequence": {
-      "type": 2,
-      "nth_of_type": 26
+      "nth_of_type": 26,
+      "type": 2
     },
     "LastLedgerSequence": {
-      "type": 2,
-      "nth_of_type": 27
+      "nth_of_type": 27,
+      "type": 2
     },
     "TransactionIndex": {
-      "type": 2,
-      "nth_of_type": 28
+      "nth_of_type": 28,
+      "type": 2
     },
     "OperationLimit": {
-      "type": 2,
-      "nth_of_type": 29
+      "nth_of_type": 29,
+      "type": 2
     },
     "ReferenceFeeUnits": {
-      "type": 2,
-      "nth_of_type": 30
+      "nth_of_type": 30,
+      "type": 2
     },
     "ReserveBase": {
-      "type": 2,
-      "nth_of_type": 31
+      "nth_of_type": 31,
+      "type": 2
     },
     "ReserveIncrement": {
-      "type": 2,
-      "nth_of_type": 32
+      "nth_of_type": 32,
+      "type": 2
     },
     "SetFlag": {
-      "type": 2,
-      "nth_of_type": 33
+      "nth_of_type": 33,
+      "type": 2
     },
     "ClearFlag": {
-      "type": 2,
-      "nth_of_type": 34
+      "nth_of_type": 34,
+      "type": 2
     },
     "IndexNext": {
-      "type": 3,
-      "nth_of_type": 1
+      "nth_of_type": 1,
+      "type": 3
     },
     "IndexPrevious": {
-      "type": 3,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 3
     },
     "BookNode": {
-      "type": 3,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 3
     },
     "OwnerNode": {
-      "type": 3,
-      "nth_of_type": 4
+      "nth_of_type": 4,
+      "type": 3
     },
     "BaseFee": {
-      "type": 3,
-      "nth_of_type": 5
+      "nth_of_type": 5,
+      "type": 3
     },
     "ExchangeRate": {
-      "type": 3,
-      "nth_of_type": 6
+      "nth_of_type": 6,
+      "type": 3
     },
     "LowNode": {
-      "type": 3,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 3
     },
     "HighNode": {
-      "type": 3,
-      "nth_of_type": 8
+      "nth_of_type": 8,
+      "type": 3
     },
     "EmailHash": {
-      "type": 4,
-      "nth_of_type": 1
+      "nth_of_type": 1,
+      "type": 4
     },
     "LedgerHash": {
-      "type": 5,
-      "nth_of_type": 1
+      "nth_of_type": 1,
+      "type": 5
     },
     "ParentHash": {
-      "type": 5,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 5
     },
     "TransactionHash": {
-      "type": 5,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 5
     },
     "AccountHash": {
-      "type": 5,
-      "nth_of_type": 4
+      "nth_of_type": 4,
+      "type": 5
     },
     "PreviousTxnID": {
+      "nth_of_type": 5,
       "type": 5,
       "meta": [
         "sMD_DeleteFinal"
-      ],
-      "nth_of_type": 5
+      ]
     },
     "LedgerIndex": {
-      "type": 5,
-      "nth_of_type": 6
+      "nth_of_type": 6,
+      "type": 5
     },
     "WalletLocator": {
-      "type": 5,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 5
     },
     "RootIndex": {
+      "nth_of_type": 8,
       "type": 5,
       "meta": [
         "sMD_Always"
-      ],
-      "nth_of_type": 8
+      ]
     },
     "AccountTxnID": {
-      "type": 5,
-      "nth_of_type": 9
+      "nth_of_type": 9,
+      "type": 5
     },
     "BookDirectory": {
-      "type": 5,
-      "nth_of_type": 16
+      "nth_of_type": 16,
+      "type": 5
     },
     "InvoiceID": {
-      "type": 5,
-      "nth_of_type": 17
+      "nth_of_type": 17,
+      "type": 5
     },
     "Nickname": {
-      "type": 5,
-      "nth_of_type": 18
+      "nth_of_type": 18,
+      "type": 5
     },
     "Amendment": {
-      "type": 5,
-      "nth_of_type": 19
+      "nth_of_type": 19,
+      "type": 5
     },
     "TicketID": {
-      "type": 5,
-      "nth_of_type": 20
+      "nth_of_type": 20,
+      "type": 5
     },
-    "Hash": {
-      "type": 5,
-      "nth_of_type": 257
+    "hash": {
+      "nth_of_type": 257,
+      "type": 5
     },
-    "Index": {
-      "type": 5,
-      "nth_of_type": 258
+    "index": {
+      "nth_of_type": 258,
+      "type": 5
     },
     "Amount": {
-      "type": 6,
-      "nth_of_type": 1
+      "nth_of_type": 1,
+      "type": 6
     },
     "Balance": {
-      "type": 6,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 6
     },
     "LimitAmount": {
-      "type": 6,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 6
     },
     "TakerPays": {
-      "type": 6,
-      "nth_of_type": 4
+      "nth_of_type": 4,
+      "type": 6
     },
     "TakerGets": {
-      "type": 6,
-      "nth_of_type": 5
+      "nth_of_type": 5,
+      "type": 6
     },
     "LowLimit": {
-      "type": 6,
-      "nth_of_type": 6
+      "nth_of_type": 6,
+      "type": 6
     },
     "HighLimit": {
-      "type": 6,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 6
     },
     "Fee": {
-      "type": 6,
-      "nth_of_type": 8
+      "nth_of_type": 8,
+      "type": 6
     },
     "SendMax": {
-      "type": 6,
-      "nth_of_type": 9
+      "nth_of_type": 9,
+      "type": 6
     },
     "MinimumOffer": {
-      "type": 6,
-      "nth_of_type": 16
+      "nth_of_type": 16,
+      "type": 6
     },
     "RippleEscrow": {
-      "type": 6,
-      "nth_of_type": 17
+      "nth_of_type": 17,
+      "type": 6
     },
     "DeliveredAmount": {
-      "type": 6,
-      "nth_of_type": 18
+      "nth_of_type": 18,
+      "type": 6
     },
     "PublicKey": {
-      "type": 7,
-      "nth_of_type": 1
+      "nth_of_type": 1,
+      "type": 7
     },
     "MessageKey": {
-      "type": 7,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 7
     },
     "SigningPubKey": {
-      "type": 7,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 7
     },
     "TxnSignature": {
+      "nth_of_type": 4,
       "type": 7,
-      "is_signing_field": false,
-      "nth_of_type": 4
+      "is_signing_field": false
     },
     "Generator": {
-      "type": 7,
-      "nth_of_type": 5
+      "nth_of_type": 5,
+      "type": 7
     },
     "Signature": {
+      "nth_of_type": 6,
       "type": 7,
-      "is_signing_field": false,
-      "nth_of_type": 6
+      "is_signing_field": false
     },
     "Domain": {
-      "type": 7,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 7
     },
     "FundCode": {
-      "type": 7,
-      "nth_of_type": 8
+      "nth_of_type": 8,
+      "type": 7
     },
     "RemoveCode": {
-      "type": 7,
-      "nth_of_type": 9
+      "nth_of_type": 9,
+      "type": 7
     },
     "ExpireCode": {
-      "type": 7,
-      "nth_of_type": 10
+      "nth_of_type": 10,
+      "type": 7
     },
     "CreateCode": {
-      "type": 7,
-      "nth_of_type": 11
+      "nth_of_type": 11,
+      "type": 7
     },
     "MemoType": {
-      "type": 7,
-      "nth_of_type": 12
+      "nth_of_type": 12,
+      "type": 7
     },
     "MemoData": {
-      "type": 7,
-      "nth_of_type": 13
+      "nth_of_type": 13,
+      "type": 7
     },
     "MemoFormat": {
-      "type": 7,
-      "nth_of_type": 14
+      "nth_of_type": 14,
+      "type": 7
     },
     "Account": {
-      "type": 8,
-      "nth_of_type": 1
+      "nth_of_type": 1,
+      "type": 8
     },
     "Owner": {
-      "type": 8,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 8
     },
     "Destination": {
-      "type": 8,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 8
     },
     "Issuer": {
-      "type": 8,
-      "nth_of_type": 4
+      "nth_of_type": 4,
+      "type": 8
     },
     "Target": {
-      "type": 8,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 8
     },
     "RegularKey": {
-      "type": 8,
-      "nth_of_type": 8
+      "nth_of_type": 8,
+      "type": 8
     },
     "TransactionMetaData": {
-      "type": 14,
-      "nth_of_type": 2
+      "nth_of_type": 2,
+      "type": 14
     },
     "CreatedNode": {
-      "type": 14,
-      "nth_of_type": 3
+      "nth_of_type": 3,
+      "type": 14
     },
     "DeletedNode": {
-      "type": 14,
-      "nth_of_type": 4
+      "nth_of_type": 4,
+      "type": 14
     },
     "ModifiedNode": {
-      "type": 14,
-      "nth_of_type": 5
+      "nth_of_type": 5,
+      "type": 14
     },
     "PreviousFields": {
-      "type": 14,
-      "nth_of_type": 6
+      "nth_of_type": 6,
+      "type": 14
     },
     "FinalFields": {
-      "type": 14,
-      "nth_of_type": 7
+      "nth_of_type": 7,
+      "type": 14
     },
     "NewFields": {
-      "type": 14,
-      "nth_of_type": 8
+      "nth_of_type": 8,
+      "type": 14
+    },
+    "TemplateEntry": {
+      "nth_of_type": 9,
+      "type": 14
+    },
+    "Memo": {
+      "nth_of_type": 10,
+      "type": 14
+    },
+    "SigningAccounts": {
+      "nth_of_type": 2,
+      "type": 15
+    },
+    "TxnSignatures": {
+      "nth_of_type": 3,
+      "type": 15,
+      "is_signing_field": false
+    },
+    "Signatures": {
+      "nth_of_type": 4,
+      "type": 15
+    },
+    "Template": {
+      "nth_of_type": 5,
+      "type": 15
+    },
+    "Necessary": {
+      "nth_of_type": 6,
+      "type": 15
+    },
+    "Sufficient": {
+      "nth_of_type": 7,
+      "type": 15
+    },
+    "AffectedNodes": {
+      "nth_of_type": 8,
+      "type": 15
+    },
+    "Memos": {
+      "nth_of_type": 9,
+      "type": 15
+    },
+    "CloseResolution": {
+      "nth_of_type": 1,
+      "type": 16
+    },
+    "TemplateEntryType": {
+      "nth_of_type": 2,
+      "type": 16
+    },
+    "TransactionResult": {
+      "nth_of_type": 3,
+      "type": 16
+    },
+    "TakerPaysCurrency": {
+      "nth_of_type": 1,
+      "type": 17
+    },
+    "TakerPaysIssuer": {
+      "nth_of_type": 2,
+      "type": 17
+    },
+    "TakerGetsCurrency": {
+      "nth_of_type": 3,
+      "type": 17
+    },
+    "TakerGetsIssuer": {
+      "nth_of_type": 4,
+      "type": 17
+    },
+    "Paths": {
+      "nth_of_type": 1,
+      "type": 18
+    },
+    "Indexes": {
+      "nth_of_type": 1,
+      "type": 19,
+      "meta": [
+        "sMD_Never"
+      ]
+    },
+    "Hashes": {
+      "nth_of_type": 2,
+      "type": 19
+    },
+    "Amendments": {
+      "nth_of_type": 3,
+      "type": 19
+    },
+    "Transaction": {
+      "nth_of_type": 257,
+      "type": 10001
+    },
+    "LedgerEntry": {
+      "nth_of_type": 257,
+      "type": 10002
+    },
+    "Validation": {
+      "nth_of_type": 257,
+      "type": 10003
+    },
+    "Metadata": {
+      "nth_of_type": 257,
+      "type": 10004
     }
   }
 }
